@@ -1,6 +1,7 @@
 #You mucst first instal sendmail. just type in the cmmand line this with out the qoutes  "sudo apt-get install sendmail -y"
 # If the i a erro take of th "-y " at the end.
 #Writen by David atrll AKA Stryker (2018)
+# line 24 ad error but fixed, if it re occurs than try to caps, space it closer or further apart, it that doesnt work let me know!
 
 #!/usr/bin/python
 import smtplib, string
