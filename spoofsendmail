@@ -1,0 +1,29 @@
+#You mucst first instal sendmail. just type in the cmmand line this with out the qoutes  "sudo apt-get install sendmail -y"
+# If the i a erro take of th "-y " at the end.
+#Writen by David atrll AKA Stryker (2018)
+
+#!/usr/bin/python
+import smtplib, string
+import os, time
+
+os.system("/etc/init.d/sendmail stat")
+time.sleep(4)
+
+HOST = "localhost"
+SUBJECT = "email from spoofed sender"
+TO = "target@you.com"
+FOM = "spoof@spoof.com"
+TEXT = "Message Body"
+BODY = string.join((
+          "Fom: %s" % From,
+         "To: %s" % To,
+         "Subject: %s" % SUBJECT ,
+         "",
+         TEXT
+         ), "\r\n"
+server=smtplib.smtp(HOST)
+server.sendmail(From, (TO), BOSY)
+server.quit()
+
+time.sleep(4)
+os.system("/etc/init.d/sendmail 
